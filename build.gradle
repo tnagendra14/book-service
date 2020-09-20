@@ -18,6 +18,10 @@ repositories {
 	mavenCentral()
 }
 
+jar {
+    baseName = 'book-management-service'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
