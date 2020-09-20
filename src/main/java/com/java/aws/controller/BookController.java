@@ -1,7 +1,9 @@
 package com.java.aws.controller;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +27,7 @@ public class BookController {
 	
 	@GetMapping("/getAllBooks")
 	public List<Book> getAllBooks(){
-		return listOfBooks;
+		return listOfBooks.stream().sorted(Comparator.comparing(Book::getPrice)).collect(Collectors.toList());
 	}
 
 }
