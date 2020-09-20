@@ -10,5 +10,5 @@ phases:
       - echo Build completed successfully   
 artifacts:
   files:
-    - target/book-management-service.jar
+    - 'build/libs/*.jar'
   discard-paths: yes

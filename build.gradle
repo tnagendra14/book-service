@@ -18,8 +18,8 @@ repositories {
 	mavenCentral()
 }
 
-jar {
-    baseName = 'book-management-service'
+bootJar {
+   archiveFileName = 'book-management-service-0.1-SNAPSHOT.jar'
 }
 
 dependencies {
